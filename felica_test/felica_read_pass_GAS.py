@@ -17,8 +17,8 @@ class FelicaCardReader(object):
 
 def spreadsheet_output(idm):
     import requests
-    url = 'https://script.google.com/macros/s/AKfycbxDF8RfY1wELzum7kjy-W1qBL98jAxen59CGQk92-bw_YPka9E/exec?data1='
-    requests.get(url + idm)
+    url = FELICA_GOOGLE_SPREADSHEET_URL
+    requests.get(url + '?data1' + idm)
     return True
 
 if __name__ == '__main__':
