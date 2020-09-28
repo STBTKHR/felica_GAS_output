@@ -29,8 +29,8 @@ if __name__ == '__main__':
         print('カードをタッチしてください')
         read_card.read_idm()
         print("カードのID: ",end='')
-        idm = str(read_card.idm)[2:18]
-        print(idm[2:])
+        idm = str(read_card.idm)[1:18]
+        print(idm[1:17])
         if spreadsheet_output(idm):
             print('スプレッドシートに書き込みました')
         else:
