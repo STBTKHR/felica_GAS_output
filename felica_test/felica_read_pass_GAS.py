@@ -19,7 +19,7 @@ def spreadsheet_output(idm):
     import requests
     import os
 
-    url = os.environ['FELICA_GOOGLE_SPREADSHEET_URL']
+    url = os.environ['FELICA_GOOGLE_SPREADSHEET_URL'] #FELICA_GOOGLE_SPREADSHEET_URLは環境変数
     requests.get(url + '?data1=' + idm)
     return True
 
@@ -35,5 +35,4 @@ if __name__ == '__main__':
             print('スプレッドシートに書き込みました')
         else:
             print('書き込みに失敗しました')
-
         signal.signal(signal.SIGINT,signal.SIG_DFL)
